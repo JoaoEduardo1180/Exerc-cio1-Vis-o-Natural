@@ -1,1 +1,11 @@
-
+import skimage as ski
+import numpy as np
+image =ski.io.imread("Lenna_(test_image) (1).png")
+for i in range(len(image)):
+  for j in range(len(image[i])):
+    if image[i][j]>127:
+      image[i][j]=255
+    else:
+      image[i][j]=0
+ski.io.imshow(image)
+ski.io.show()
